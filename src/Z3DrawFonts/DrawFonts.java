@@ -22,8 +22,6 @@ class panelPisania extends JPanel{
         g2.setFont(new Font("Stencil", Font.PLAIN, 28));
         g2.drawString(textToWrite, 100, 100);
 
-
-
        g2.setFont(new Font("Book Antiqua", Font.PLAIN, 28));
         AffineTransform at = AffineTransform.getQuadrantRotateInstance(3);
         g2.setTransform(at);
@@ -38,6 +36,7 @@ class panelPisania extends JPanel{
         g2.drawString(textToWrite, -330, -300);
 
         g2.setTransform(defaultAt);
+
 
 /*
         g2.setColor(Color.black);
