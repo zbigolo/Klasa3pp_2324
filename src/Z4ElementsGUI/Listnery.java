@@ -1,4 +1,4 @@
-package P03_ObiektyRamki;
+package Z4ElementsGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

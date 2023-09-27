@@ -1,4 +1,4 @@
-package P03_ObiektyRamki;
+package Z4ElementsGUI;
 
 import javax.swing.*;
 import javax.swing.border.Border;
