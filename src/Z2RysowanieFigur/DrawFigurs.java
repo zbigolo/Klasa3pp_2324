@@ -1,4 +1,4 @@
-package Z2RysowanieFigur;
+package Z2;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -67,7 +67,7 @@ public class DrawFigurs{
 
 
     public DrawFigurs(){
-        JFrame myFrame = new JFrame();
+        JFrame myFrame = new JFrame("ZG");
 
         myFrame.setSize(900, 800);
         myFrame.setResizable(false);
