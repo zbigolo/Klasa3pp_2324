@@ -1,24 +1,23 @@
 package Z4ElementsGUI;
 
 import javax.swing.*;
-import javax.swing.text.PlainDocument;
+import javax.swing.border.Border;
 import java.awt.*;
-
 
 public class Sample_01_JLabel {
 
-
+    private JLabel witaj, zegnaj, myicon, sample;
     public JPanel myContentPane () {
         JPanel myPanel = new JPanel(null);
 
         // Etykieta 1
-            JLabel witaj = new JLabel("Witaj 22222222");
+            witaj = new JLabel("Witaj");
             witaj.setBounds(10,20,100,50);
             witaj.setVisible(true);
             myPanel.add(witaj);
 
         // Etykieta 2
-            JLabel zegnaj = new JLabel("Nominowanie", SwingConstants.CENTER);
+            zegnaj = new JLabel("Nominowanie", SwingConstants.CENTER);
             zegnaj.setBounds(50,100,300,100);
            // zegnaj.setBackground(Color.green);
             zegnaj.setBackground(new Color(100,34,120));
@@ -28,7 +27,7 @@ public class Sample_01_JLabel {
             myPanel.add(zegnaj);
         // Etykieta 3
             ImageIcon ikona = new ImageIcon(".\\grafika\\save.png");
-            JLabel myicon = new JLabel(ikona);
+            myicon = new JLabel(ikona);
             myicon.setBounds(100,300,250,150);
             myicon.setVisible(true);
             myicon.setAlignmentY(SwingConstants.HORIZONTAL);
@@ -36,7 +35,25 @@ public class Sample_01_JLabel {
             myicon.setOpaque(true);
             myPanel.add(myicon);
 
-            // Etykieta 4
+        // Etykieta 4
+         sample = new JLabel();
+         ImageIcon ikona2 = new ImageIcon(".\\grafika\\save.png");
+         Border ramka = BorderFactory.createLineBorder(Color.red,6,true);
+         sample.setText("<html><u>Witaj w aplikacji</u></html>");
+         sample.setIcon(ikona2);
+         sample.setBounds(400,100,200,60);
+         sample.setOpaque(true);
+         sample.setBackground(Color.cyan);
+         sample.setHorizontalAlignment(JLabel.RIGHT);
+         sample.setVerticalTextPosition(JLabel.BOTTOM);
+         sample.setForeground(Color.white);
+         sample.setBorder(ramka);
+         sample.setVisible(true);
+         myPanel.add(sample);
+
+
+
+        // Etykieta 5
 
         return myPanel;
     }
