@@ -10,14 +10,24 @@ class paneDrawTransorm extends JPanel{
 
     public void paintComponent(Graphics g){
             Graphics2D g2d = (Graphics2D) g;
+<<<<<<< HEAD
             AffineTransform old = g2d.getTransform();
 
             g2d.setColor(Color.blue);
             g2d.fillRect(150, 150, 100, 50);
+=======
+
+            AffineTransform old = g2d.getTransform();
+/*
+            g2d.setColor(Color.blue);
+            g2d.fillRect(150, 150, 300, 150);
+
+>>>>>>> 896f40f (ze szkoły)
             g2d.setTransform(old);
 
             g2d.scale(0.5,0.5);
             g2d.setColor(Color.yellow);
+<<<<<<< HEAD
             g2d.fillRect(300, 300, 100, 50);
             g2d.setTransform(old);
 
@@ -25,6 +35,28 @@ class paneDrawTransorm extends JPanel{
             g2d.setColor(Color.red);
             g2d.fillRect(150, 150, 100, 50);
             g2d.setTransform(old);
+=======
+            g2d.fillRect(300, 300, 300, 150);
+            g2d.setTransform(old);
+*/
+        g2d.fillRect(100, 100, 10, 50);
+            g2d.rotate(-9,100,100);
+            g2d.setColor(Color.red);
+            g2d.fillRect(100, 100, 10, 50);
+            g2d.setTransform(old);
+
+            g2d.setColor(Color.black);
+            g2d.drawLine(300,300,600,300);
+            for(int i = -1; i > -90; i--){
+                g2d.setColor(new Color(120+i,100, Math.abs(i)+150));
+                g2d.rotate(i,450,300);
+
+                g2d.drawLine(300,300,600,300);
+            }
+
+    //
+
+>>>>>>> 896f40f (ze szkoły)
     }
 }
 
