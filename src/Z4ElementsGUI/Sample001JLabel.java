@@ -5,6 +5,8 @@ import java.awt.*;
 
 public class Sample001JLabel {
 
+    //
+
             private JLabel przycisk1, przycisk2;
 
             private JLabel newLabel(int x, int y){
