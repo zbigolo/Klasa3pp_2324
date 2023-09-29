@@ -5,6 +5,7 @@ public class Sample001JLabel {
          public JPanel myContentPane () {
              JPanel myPanel = new JPanel(null);
                   // tutaj tworzymy obiekty
+                  // to zrób
              return myPanel;
         }
 
