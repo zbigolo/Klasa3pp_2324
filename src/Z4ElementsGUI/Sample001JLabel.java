@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Sample001JLabel {
 
-    //
+    // analiza
 
             private JLabel przycisk1, przycisk2;
 
