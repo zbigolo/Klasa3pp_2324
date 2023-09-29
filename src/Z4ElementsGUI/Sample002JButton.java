@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class Sample002JButton {
 
+   private JButton testowyPrzycisk;
     private JPanel myContentPane() {
         JPanel panel = new JPanel(null);
 
