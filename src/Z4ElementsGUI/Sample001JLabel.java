@@ -28,7 +28,7 @@ public class Sample001JLabel {
                 przycisk.setVisible(true);
                 return  przycisk;
             }
-                     public JPanel myContentPane () {
+             public JPanel myContentPane () {
              JPanel myPanel = new JPanel(null);
 
              przycisk1 = newLabel(20,100);
