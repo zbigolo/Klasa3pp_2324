@@ -15,8 +15,9 @@ public class Sample002JButton {
         sampleJButton.setBackground(Color.black);
         sampleJButton.setForeground(new Color(255,255,200));
         sampleJButton.setBorder(BorderFactory.createLineBorder(Color.yellow,6));
-
         myPanel.add(sampleJButton);
+
+
         return myPanel;
     }
     public Sample002JButton () {

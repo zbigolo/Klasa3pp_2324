@@ -5,10 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-// zastosowanie klasycznego listnera
+// zastosowanie rozdzielnych  listnerów
 public class Sample003AListner {
 
     JButton czerwonyButton, niebieskiButton,resetButton;
+    JTextField poletekstowe;
     private JButton przycisk(int x, int y, String textJButton){
 
         JButton sampleJButton = new JButton();
@@ -27,9 +28,10 @@ public class Sample003AListner {
          czerwonyButton = przycisk(100,200, "Czerwony");
          niebieskiButton = przycisk(200,400,"Niebieski");
          resetButton = przycisk(400, 600,"Reset");
+         poletekstowe = new JTextField(20);
+         poletekstowe.setBounds(10,50,180,50);
 
          czerwonyButton.addActionListener(new ActionListener() {
-
              @Override
              public void actionPerformed(ActionEvent e) {
                  myPanel.setBackground(Color.red);
@@ -37,21 +39,23 @@ public class Sample003AListner {
          });
 
         niebieskiButton.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 myPanel.setBackground(Color.blue);
+                String napis = poletekstowe.getText();
+                System.out.println(napis);
+                poletekstowe.setText("");
             }
         });
 
         resetButton.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 myPanel.setBackground(Color.white);
             }
         });
 
+        myPanel.add(poletekstowe);
         myPanel.add(czerwonyButton);
         myPanel.add(niebieskiButton);
         myPanel.add(resetButton);
