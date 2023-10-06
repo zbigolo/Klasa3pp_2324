@@ -22,6 +22,7 @@ public class Sample003AListner {
 
     private JPanel myContentPane() {
         JPanel myPanel = new JPanel(null);
+        int liczba = 0;
 
         myPanel.setBackground(Color.white);
 
@@ -34,10 +35,21 @@ public class Sample003AListner {
          czerwonyButton.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
+                 myPanel.setBackground(Color.black);
+                 String cos = poletekstowe.getText();
+                 int liczba = Integer.valueOf(cos);
+                 poletekstowe.setText("Podaj nową liczbę");
+                 System.out.println(liczba);
+             }
+         });
+        /*
+         czerwonyButton.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
                  myPanel.setBackground(Color.red);
              }
          });
-
+*/
         niebieskiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
