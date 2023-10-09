@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Sample_04A_JTextField implements ActionListener {
+public class Sample04AJTextField implements ActionListener {
 
     private JTextField test;
     private JLabel etykieta;
@@ -54,7 +54,7 @@ public class Sample_04A_JTextField implements ActionListener {
 
 
 
-    public Sample_04A_JTextField() {
+    public Sample04AJTextField() {
         JFrame myWindow = new JFrame("Sample JTextField");
         myWindow.setContentPane(myContentPane());
         myWindow.setSize(400, 300);
@@ -66,7 +66,7 @@ public class Sample_04A_JTextField implements ActionListener {
     }
 
     public static void main (String[] args) {
-         new Sample_04A_JTextField();
+         new Sample04AJTextField();
 
     }
 }
