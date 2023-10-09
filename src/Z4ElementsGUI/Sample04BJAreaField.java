@@ -5,6 +5,8 @@ public class Sample04BJAreaField {
     private JTextArea myText;
     private final String sampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing";
     private final String sampleNumber = "12345678901234567890123456789012345678901234567890";
+
+    private final String text ="dolor";
     public JPanel myContentPane () {
         JPanel myPanel = new JPanel(null);
         myText = new JTextArea(10,50);
@@ -15,14 +17,25 @@ public class Sample04BJAreaField {
         myText.append("\n");
         myText.append(sampleText);
 
-        myText.select(myText.getText().indexOf("dolor"),myText.getText().
-                indexOf("dolor")+"dolor".length());
+        myText.setSelectedTextColor(Color.blue);
+        myText.setSelectionColor(Color.yellow);
+        myText.select(myText.getText().indexOf(text),myText.getText().
+                indexOf(text)+text.length());
         JScrollPane pod = new JScrollPane(myText);
         pod.setBounds(0,0,300,200);
         pod.setBackground(Color.yellow);
 
-        System.out.println(sampleText.length());
-        System.out.println(sampleNumber.length());
+        int start = myText.getSelectionStart();
+        int end = myText.getSelectionEnd();
+
+        StringBuilder strBuilder = new StringBuilder(myText.getText());
+        strBuilder.replace(start, end, "KONIEC");
+        myText.setText(strBuilder.toString());
+
+
+
+        System.out.println(myText.getSelectedText());
+
 
          myPanel.add(pod);
 
