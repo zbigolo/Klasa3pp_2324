@@ -42,7 +42,11 @@ public class Sample003AListner {
                  System.out.println(liczba);
              }
          });
-        /*
+         ;
+
+
+
+    /*
          czerwonyButton.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
