@@ -68,6 +68,7 @@ public class Sample05PolaSpecjalne {
         bdata.setBounds(275,80,150,20);
         bdata.setVisible(true);
 
+        
         ActionListener przyciski = new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
