@@ -7,9 +7,6 @@ import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Locale;
 
 public class Sample05PolaSpecjalne {
 
@@ -68,7 +65,8 @@ public class Sample05PolaSpecjalne {
         bdata.setBounds(275,80,150,20);
         bdata.setVisible(true);
 
-        
+
+
         ActionListener przyciski = new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
