@@ -12,11 +12,11 @@ public class Sample04BJAreaField {
     private final String sampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing";
     private final String sampleNumber = "12345678901234567890123456789012345678901234567890";
 
-    String text = "";
+    private String tex;
     public JPanel myContentPane () {
         JPanel myPanel = new JPanel(null);
 
-        myPanel.setBackground(Color.yellow);
+        myPanel.setBackground(new Color(240,230,140));
        lfind = new JLabel(" Find word: ");
        lfind.setBounds(10,10,100, 20);
 
@@ -36,20 +36,39 @@ public class Sample04BJAreaField {
        treplace.setBounds(100,70,200,20);
 
         myText = new JTextArea(10,20);
-        myText.setBounds(10,150, 560,400);
+        myText.setBounds(10,150, 360,360);
         myText.setLineWrap(false);
         myText.insert(sampleNumber,0);
-        myText.append("\n");
-        myText.append(sampleText);
-        text = "dolor";
+        myText.insert(sampleText,1);
+
+        myText.append("\n"+sampleText);
         myText.setSelectedTextColor(Color.white);
         myText.setSelectionColor(Color.blue);
+        myText.setTabSize(10);
+       // myText.setEditable(false);
+
+
+        myText.setFont(new Font("Arial", Font.PLAIN, 16));
+        myText.setBackground(Color.yellow);
+        myText.setForeground(new Color(210,17,234));
+
+        myText.setSelectedTextColor(Color.white);
+        myText.setSelectionColor(Color.blue);
+
+        JScrollPane pod = new JScrollPane(myText);
+        pod.setBounds(10,140,570,400);
+
+
 
        bfind.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
-               text = tfind.getText();
-               myText.select(myText.getText().indexOf(text),myText.getText(). indexOf(text)+text.length());
+               String text = tfind.getText();
+
+               int pozycja = myText.getText().indexOf(text);
+
+                myText.select(pozycja, pozycja + text.length());
+
                myText.requestFocusInWindow();
            }
        });
@@ -72,15 +91,10 @@ public class Sample04BJAreaField {
 
 
 
-        /*
+            ;
 
 
-        ;
 
-
-        JScrollPane pod = new JScrollPane(myText);
-        pod.setBounds(0,0,300,200);
-        pod.setBackground(Color.yellow);
 
 
 
@@ -90,11 +104,11 @@ public class Sample04BJAreaField {
 
 
          myPanel.add(pod);
-*/
+
         myPanel.add(lfind); myPanel.add(lreplace);
         myPanel.add(tfind); myPanel.add(treplace);
         myPanel.add(bfind); myPanel.add(breplace);
-         myPanel.add(myText);
+       //  myPanel.add(myText);
         return myPanel;
     }
 
