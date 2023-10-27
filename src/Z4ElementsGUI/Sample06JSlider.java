@@ -4,6 +4,8 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Sample06JSlider {
 
@@ -14,7 +16,11 @@ public class Sample06JSlider {
     private JLabel napisModyfikowany;
     private int sizeFont = 5;
 
+    private JButton zmianaTekstu;
+    private int pozycjaZmianyTekstu  = 0;
+
     private String[] sampleText ={"Dzień dobry", "Good morning","Buenos dias"};
+    private int sizeSampleText  = 3;
     public JPanel myContentPane() {
         JPanel panel = new JPanel(null);
 
@@ -35,7 +41,7 @@ public class Sample06JSlider {
         slider.setVisible(true);
 
 
-        napisModyfikowany = new JLabel("Dzień dobry");
+        napisModyfikowany = new JLabel(sampleText[0]);
         napisModyfikowany.setBounds(20,120, 250,40);
         napisModyfikowany.setFont(new Font("Arial", Font.PLAIN,5));
         napisModyfikowany.setOpaque(true);
@@ -45,14 +51,34 @@ public class Sample06JSlider {
             public void stateChanged(ChangeEvent e) {
                 int vauleSlider = slider.getValue();
                 System.out.println(vauleSlider);
-
+                sizeFont = vauleSlider;
                 napisModyfikowany.setFont(new Font("Arial", Font.PLAIN,vauleSlider));
                 napisModyfikowany.requestFocusInWindow();
             }
         });
 
+        zmianaTekstu = new JButton(">>");
+        zmianaTekstu.setBounds(120,170, 50,40);
+        zmianaTekstu.setForeground(Color.white);
+        zmianaTekstu.setBackground(Color.decode("#558B2F"));
 
-        panel.add(slider);
+
+        zmianaTekstu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pozycjaZmianyTekstu++;
+
+                if (pozycjaZmianyTekstu > 2) pozycjaZmianyTekstu = 0;
+
+                napisModyfikowany.setText(sampleText[pozycjaZmianyTekstu]);
+
+                napisModyfikowany.requestFocusInWindow();
+
+            }
+        });
+
+       panel.add(slider);
+       panel.add(zmianaTekstu);
        panel.add(napisRozmiar);
        panel.add(napisTytul);
        panel.add(napisModyfikowany);
