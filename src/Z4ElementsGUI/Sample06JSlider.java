@@ -44,9 +44,14 @@ public class Sample06JSlider {
         napisRozmiarFont.setFont(new Font("Curier", Font.BOLD,20));
 
         slider = new JSlider(0,40,0);
-        slider.setBounds(20,90,250,20);
-        slider.setVisible(true);
+        slider.setBounds(20,90,250,30);
+       // slider.setPaintTicks(true);
+        //slider.setPaintTrack(false);
 
+        slider.setMajorTickSpacing(5);
+        slider.setMinorTickSpacing(2);
+        slider.setPaintLabels(true);
+        slider.setVisible(true);
 
         napisModyfikowany = new JLabel(sampleText[0]);
         napisModyfikowany.setBounds(20,120, 250,40);
@@ -61,10 +66,8 @@ public class Sample06JSlider {
                 String sizefont = valueOf(vauleSlider);
 
                 napisModyfikowany.setFont(new Font("Arial", Font.PLAIN,vauleSlider));
-                napisModyfikowany.requestFocusInWindow();
-
                 napisRozmiarFont.setText(sizefont);
-                napisRozmiarFont.requestFocusInWindow();
+
             }
         });
 
