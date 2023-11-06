@@ -48,10 +48,16 @@ public class Sample06JSlider {
        // slider.setPaintTicks(true);
         //slider.setPaintTrack(false);
 
+        slider.setFont(new Font("Gigi",Font.ITALIC,16));
+
         slider.setMajorTickSpacing(5);
-        slider.setMinorTickSpacing(2);
+        //slider.setMinorTickSpacing(2);
         slider.setPaintLabels(true);
+
+
         slider.setVisible(true);
+
+
 
         napisModyfikowany = new JLabel(sampleText[0]);
         napisModyfikowany.setBounds(20,120, 250,40);
