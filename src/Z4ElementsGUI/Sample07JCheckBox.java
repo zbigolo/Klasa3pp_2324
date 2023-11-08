@@ -33,9 +33,11 @@ public class Sample07JCheckBox {
 
         windows = new JCheckBox("OS Windows");
         windows.setBounds(20,50, 100,20);
+
         lwindows = new JLabel(new ImageIcon(".\\grafika\\os\\win.png"));
         lwindows.setBounds(200,20,64,64);
         lwindows.setVisible(false);
+
         pwindows = new JLabel("Windows");
         pwindows.setBounds(200,85,64,20);
         pwindows.setHorizontalAlignment(SwingConstants.CENTER);

@@ -28,7 +28,6 @@ public class Weryfikator {
                             isUpperCase = true;
                             continue;
                         }
-                        System.out.println(i);
                     }
                     System.out.println("isNumber: " + isNumber
                                                 + "\n isLowerCase: " + isLowerCase
