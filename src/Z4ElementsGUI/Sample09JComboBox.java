@@ -23,7 +23,7 @@ public class Sample09JComboBox {
         gora.setBounds(0, 0, 400, 90);
         gora.setBackground(Color.green);
 
-        wyborOS = new JComboBox<>(systemy);
+        wyborOS = new JComboBox(systemy);
         wyborOS.setBounds(50, 40, 200, 25);
 
 
@@ -72,6 +72,7 @@ public class Sample09JComboBox {
                 ikona.setIcon(new ImageIcon(path));
             }
         });
+       /*
         wyborOS.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged (ItemEvent e) {
@@ -91,13 +92,12 @@ public class Sample09JComboBox {
             }
         });
 
-
+*/
         mypanel.add(ikona);
         mypanel.add(tekst);
         mypanel.add(tempselected);
         mypanel.add(tempdeselected);
         mypanel.add(gora);
-        //l.add(dol);
         gora.add(wyborOS);
         return mypanel;
     }
