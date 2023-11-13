@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 public class Sample08_JRadioButton {
 
@@ -30,7 +32,8 @@ public class Sample08_JRadioButton {
         mycolor.setOpaque(true);
         mycolor.setBorder(BorderFactory.createRaisedBevelBorder());
 
-        redbackground = new JRadioButton("Czerwone",new ImageIcon(".\\grafika\\save.png"));
+        redbackground = new JRadioButton("Czerwone",
+                new ImageIcon(".\\grafika\\save.png"));
         redbackground.setBounds(20,50,90,20);
         greenbackground = new JRadioButton("Zielone");
         greenbackground.setBounds(120,50,80,20);
@@ -45,8 +48,10 @@ public class Sample08_JRadioButton {
         blackground.setBounds(320,50,80,20);
 
         tlo = new ButtonGroup();
-        tlo.add(redbackground); tlo.add(greenbackground);
-        tlo.add(yellowbackground);tlo.add(blackground);
+        tlo.add(redbackground);
+        tlo.add(greenbackground);
+        tlo.add(yellowbackground);
+         tlo.add(blackground);
 
         ActionListener myJRadioButtonListner = new ActionListener() {
             @Override
@@ -55,25 +60,24 @@ public class Sample08_JRadioButton {
                 System.out.println("Clicked: " + rbutton.getText());
 
                 switch (e.getActionCommand()){
-                    case "Czerwone" :
-                        mycolor.setBackground(Color.red);
-                        break;
-                    case "Zielone"  :
-                        mycolor.setBackground(Color.green);
-                        break;
-                    case "Żółte"    :
-                        mycolor.setBackground(Color.yellow);
-                        break;
-                    case "Czarne"   :
-                        mycolor.setBackground(Color.black);
+                    case "Czerwone" ->  {
+                                                            mycolor.setBackground(Color.red);
+                                                       }
+                    case "Zielone"  ->   mycolor.setBackground(Color.green);
+                    case "Żółte"    ->   mycolor.setBackground(Color.yellow);
+                    case "Czarne"   ->   mycolor.setBackground(Color.black);
                 }
             }
         };
+
+
 
         redbackground.addActionListener(myJRadioButtonListner);
         greenbackground.addActionListener(myJRadioButtonListner);
         yellowbackground.addActionListener(myJRadioButtonListner);
         blackground.addActionListener(myJRadioButtonListner);
+
+
 
         mypanel.add(colorbackground);
         mypanel.add(mycolor);

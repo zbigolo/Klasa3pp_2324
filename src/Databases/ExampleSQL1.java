@@ -77,7 +77,7 @@ public class ExampleSQL1 {
                     JOptionPane.ERROR_MESSAGE);
         }
         finally {
-            //if (result.equals("0")) pstmt.close();
+
             connection.close();
         }
     }
