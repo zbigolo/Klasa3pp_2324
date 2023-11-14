@@ -39,6 +39,7 @@ public class Sample08_JRadioButton {
         greenbackground.setBounds(120,50,80,20);
         yellowbackground = new JRadioButton();
         yellowbackground.setBounds(220,50,20,20);
+        yellowbackground.setSelected(true);
         zolty = new JLabel(new ImageIcon("insta.png"));
         zolty.setBounds(245,48,24,24);
         yellowbackground.setText("Żółte");

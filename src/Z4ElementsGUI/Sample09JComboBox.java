@@ -18,7 +18,8 @@ public class Sample09JComboBox {
 
     private JPanel myContentPane () {
         JPanel mypanel = new JPanel(null);
-        String[] systemy = {"", "Windows", "Linux", "MacOS", "DOS", "Unix"};
+
+        String[] systemy = {"", "Windows", "Linux", "MacOS", "DOS", "Unix", "Real Time OS"};
 
         gora = new JPanel(null);
         gora.setBounds(0, 0, 400, 90);
@@ -68,12 +69,15 @@ public class Sample09JComboBox {
                         path = "./grafika/os/dos.png";
                         tekst.setText("Twój wybór : DOS OS");
                     }
+                    case 5 -> tekst.setText("Twój wybór : Unix");
+                    case 6 -> tekst.setText("Twój wybór : RTOS");
+
                 }
 
                 ikona.setIcon(new ImageIcon(path));
             }
         });
-       /*
+
         wyborOS.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged (ItemEvent e) {
@@ -93,7 +97,7 @@ public class Sample09JComboBox {
             }
         });
 
-*/
+
         mypanel.add(ikona);
         mypanel.add(tekst);
         mypanel.add(tempselected);
