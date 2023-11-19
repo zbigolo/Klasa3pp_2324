@@ -1,4 +1,4 @@
-package PO_7_BazyDanych;
+package Databases;
 
 import javax.swing.*;
 import java.io.FileInputStream;
