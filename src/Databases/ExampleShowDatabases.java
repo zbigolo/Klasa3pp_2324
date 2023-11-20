@@ -1,4 +1,4 @@
-package PO_7_BazyDanych;
+package Databases;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
