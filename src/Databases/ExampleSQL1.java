@@ -53,6 +53,7 @@ public class ExampleSQL1 {
 
             System.out.println("Liczba kolumn: " + rsmd.getColumnCount() );
 
+
             System.out.println(rsmd.getColumnName(1)+"\t" +rsmd.getColumnName(2)+"\t"+
                     rsmd.getColumnName(3));
             while(rs.next()){
