@@ -34,9 +34,9 @@ public class ExampleInsertandUpdateTable {
 
             String insertdate = "INSERT INTO Osoba(pesel, imie, pensja) \n" +
                     "VALUES \n" +
-                    "('92060982918', 'Marian', 1500), \n "+
-                    "('54072921336', 'Tomasz',4000), \n "+
-                    "('81043057675', 'Adrian',3500);";
+                    "('92060982913', 'Ewa', 1500), \n "+
+                    "('54072921334', 'Tadeuszz',4000), \n "+
+                    "('81043237673', 'Adrian',3500);";
 
             resultQuery = stmt.executeUpdate(insertdate);
             if (resultQuery > 0)
@@ -44,7 +44,7 @@ public class ExampleInsertandUpdateTable {
 
             System.out.println("\n OPERATION UPDATE");
             String updatedate = "UPDATE Osoba \n" +
-                    "SET pensja = 21400 \n" +
+                    "SET pensja = 2100 \n" +
                     "WHERE imie = 'Adrian';";
 
             resultQuery = stmt.executeUpdate(updatedate);

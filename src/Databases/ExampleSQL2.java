@@ -38,7 +38,7 @@ public class ExampleSQL2 {
                     ResultSet.CONCUR_READ_ONLY);
 
             pstmt.setString(2, "Adrian");
-            pstmt.setInt(1, 20000);
+            pstmt.setInt(1, 200);
 
             rs = pstmt.executeQuery();
 
