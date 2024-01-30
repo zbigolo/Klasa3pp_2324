@@ -44,7 +44,7 @@ public class Sample10OknoDialogoweZKomunikatami {
         switch(wyborOptionDialog){
             case JOptionPane.YES_OPTION -> System.out.println(" Wybrales Ok ");
             case JOptionPane.NO_OPTION -> System.out.println(" Wybrales PRAWDOPODOBNIE ");
-            case JOptionPane.CANCEL_OPTION -> System.out.println("Wybrals Cancel");
+            case JOptionPane.CANCEL_OPTION -> System.out.println("Wybrales Cancel");
         }
         // showInputdialog
         String liczba;
