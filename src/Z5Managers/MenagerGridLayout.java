@@ -5,13 +5,37 @@ import java.awt.*;
 
 public class MenagerGridLayout {
     public JPanel createContentPane(){
-        GridLayout layout = new GridLayout(2,2);
-        JPanel mypanel = new JPanel(layout);
+        GridLayout gridlayout = new GridLayout();
+      //  GridLayout gridlayout = new GridLayout(2, 4);
+     //   GridLayout gridlayout = new GridLayout(2,4,15,15);
+
+        gridlayout.setColumns(2);
+        gridlayout.setRows(4);
+        gridlayout.setHgap(20);
+        gridlayout.setVgap(2);
+        JPanel mypanel = new JPanel(gridlayout);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         String[] napisy = {"Cała naprzód","Pół naprzód", "Ćwierć naprzód",
-                           "STOP", "Cwierć wstecz", "Pół wstecz", "Cała wstecz"};
+                           "STOP", "Cwierć wstecz", "Pół wstecz", "Cała wstecz","    "};
 
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 8; i++) {
             JButton przyciski = new JButton(napisy[i]);
             mypanel.add(przyciski);
         }
@@ -22,8 +46,6 @@ public class MenagerGridLayout {
         JFrame myWindow = new JFrame("Manager GirdLayout");
         myWindow.setContentPane(createContentPane());
         myWindow.setSize(300, 400);
-
-        //myWindow.setLayout();
         myWindow.setLocationRelativeTo(null);
         myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         myWindow.setVisible(true);
