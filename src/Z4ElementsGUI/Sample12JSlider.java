@@ -11,18 +11,18 @@ public class Sample12JSlider {
     private JLabel tekst;
     private String sampleText =  "Sample";
 
-    private int sizeFont = 12;
+    private int sizeFont = 3;
     private JPanel myContentPane(){
         JPanel panel = new JPanel(new FlowLayout());
 
 
-        suwak = new JSlider(JSlider.HORIZONTAL,0,36,sizeFont);
+        suwak = new JSlider(JSlider.HORIZONTAL,0,15,sizeFont);
         suwak.setPreferredSize(new Dimension(380,40));
         suwak.setBackground(Color.CYAN);
-        suwak.setMajorTickSpacing(4);
-        suwak.setMinorTickSpacing(1);
+        suwak.setMajorTickSpacing(1);
+       // suwak.setMinorTickSpacing(1);
         suwak.setPaintTrack(true);
-        suwak.setPaintTicks(true);
+       // suwak.setPaintTicks(true);
         suwak.setPaintLabels(true);
 
         Font font = new Font("Helvetica", Font.PLAIN, sizeFont);
