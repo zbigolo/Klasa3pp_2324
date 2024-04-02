@@ -11,25 +11,23 @@ public class ManagerGridBagLayout {
 
         GridBagConstraints gbc =
                new GridBagConstraints( 0, 0, 1, 1, 0.0, 0.0,
-                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
-                new Insets( 4, 8, 6, 10 ), 0, 0 );
+                GridBagConstraints.PAGE_START, GridBagConstraints.VERTICAL,
+                new Insets( 4, 8, 6, 10 ), 10, 0 );
         mypanel.add( new JButton( "Start"), gbc );
 
-     //   gbc = new GridBagConstraints( 1, 0, 1, 1, 1.0, 0.0,
-     //        GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
-    //           new Insets( 4, 8, 6, 10 ), 0, 0 );
+        gbc = new GridBagConstraints( 1, 0, 1, 1, 1.0, 0.0,
+            GridBagConstraints.PAGE_END, GridBagConstraints.HORIZONTAL,
+              new Insets( 4, 8, 6, 10 ), 0, 0 );
        gbc.gridx = 1;
        gbc.gridy = 0;
        mypanel.add( new JButton( "Naprzód" ), gbc );
 
-    //     gbc = new GridBagConstraints( 2, 0, 1, 1, 0.0, 0.0,
-   //             GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
-  //             new Insets( 4, 8, 6, 10 ), 0, 0 );
-         gbc.gridx = 0;
-         gbc.gridy = 1;
+        gbc = new GridBagConstraints( 2, 0, 1, 1, 0.0, 0.0,
+                GridBagConstraints.FIRST_LINE_START, GridBagConstraints.BOTH,
+                new Insets( 4, 8, 6, 10 ), 0, 0 );
         mypanel.add( new JButton( "Wstecz" ), gbc );
-/*
-        gbc = new GridBagConstraints( 0, 1, 3, 1, 0.0, 0.0,
+
+        gbc = new GridBagConstraints( 0, 1, 2, 1, 0.0, 0.0,
                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
                 new Insets( 4, 8, 6, 10 ), 0, 25 );
         mypanel.add( new JButton( "Zwiększ prędkość odtwarzania" ), gbc );
@@ -39,7 +37,6 @@ public class ManagerGridBagLayout {
               new Insets( 4, 8, 6, 10 ), 0, 0);
        mypanel.add( new JButton( "Stop"), gbc );
 
-*/
         return mypanel;
     }
     public ManagerGridBagLayout() {
