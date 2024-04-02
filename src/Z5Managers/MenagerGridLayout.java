@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class MenagerGridLayout {
     public JPanel createContentPane(){
-        GridLayout layout = new GridLayout(3,3);
+        GridLayout layout = new GridLayout(2,2);
         JPanel mypanel = new JPanel(layout);
 
         String[] napisy = {"Cała naprzód","Pół naprzód", "Ćwierć naprzód",
