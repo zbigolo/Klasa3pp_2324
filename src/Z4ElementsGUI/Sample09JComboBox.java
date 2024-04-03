@@ -23,7 +23,7 @@ public class Sample09JComboBox {
 
         gora = new JPanel(null);
         gora.setBounds(0, 0, 400, 90);
-        gora.setBackground(Color.green);
+        gora.setBackground(new Color(120,56,76).brighter());
 
         wyborOS = new JComboBox(systemy);
         wyborOS.setBounds(50, 40, 200, 25);
@@ -82,6 +82,7 @@ public class Sample09JComboBox {
             @Override
             public void itemStateChanged (ItemEvent e) {
                 int state = e.getStateChange();
+
                 String tmp = "Wybrałeś: ";
                 String tmp1 = "";
 
