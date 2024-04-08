@@ -19,7 +19,7 @@ public class ManagerBox2Layout {
         myPanel.setLayout(mylayout);
         myPanel.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 
-        for (int i = 1; i < 6 ; i++) {
+        for (int i = 0; i < 6 ; i++) {
             JButton butt = new JButton("Przycisk" + i);
 
             myPanel.add(Box.createRigidArea(new Dimension(10,10)));
