@@ -10,12 +10,13 @@ public class Sample13_Table{
 
         String[] columnNames = {"Name", "Age", "Student","Telefon"};
 
-        Object[][] data = {
-                {"Ken", new Integer(5), new Boolean(false),"11111111111"},
-                {"Tom", new Integer(3), new Boolean(true),""},
-                {"Susam", new Integer(2), new Boolean(false),"22222222222"},
-                {"Mark",new Integer(20), new Boolean(true),"33333333333"},
-                {"Joe", new Integer(10), new Boolean(false),"00000000000"}
+        Object[][] data;
+        data = new Object[][]{
+                {"Ken", 5, false,"11111111111"},
+                {"Tom", 3, true,""},
+                {"Susam", 2, false,"22222222222"},
+                {"Mark",20, true,"33333333333"},
+                {"Joe", 10, false, "00000000000"}
         };
         JTable table = new JTable(data, columnNames);
         table.setRowHeight(100);
