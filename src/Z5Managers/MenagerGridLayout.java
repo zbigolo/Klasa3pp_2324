@@ -21,7 +21,7 @@ public class MenagerGridLayout {
     public MenagerGridLayout() {
         JFrame myWindow = new JFrame("Manager GirdLayout");
         myWindow.setContentPane(createContentPane());
-        myWindow.setSize(300, 400);
+        myWindow.setSize(600, 400);
 
         //myWindow.setLayout();
         myWindow.setLocationRelativeTo(null);

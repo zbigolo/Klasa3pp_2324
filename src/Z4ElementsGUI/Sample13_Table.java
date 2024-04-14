@@ -60,14 +60,16 @@ class Person{
 
 
 public class Sample13_Table{
-    public static void main(String args[]){
+
+
+    public static void main(String[] args){
         JFrame frame = new JFrame();
 
-        ArrayList<Person> people = new ArrayList<Person>();
+        ArrayList<Person> people = new ArrayList<>();
 
         people.add(new Person("Ken", 5, false,"11111111111"));
         people.add(new Person("Tom", 3, true,""));
-        people.add(new Person("Susam", 2, false,"22222222222"));
+        people.add(new Person("Susan", 2, false,"22222222222"));
         people.add(new Person("Mark",20, true,"33333333333"));
         people.add(new Person());
 
@@ -90,14 +92,11 @@ public class Sample13_Table{
             data[i][3] = dane[i].getNumberTel();
         }
 
-
-
-
         JTable table = new JTable(data , columnNames);
-        table.setRowHeight(100);
+      //  table.setRowHeight(100);
         table.setBackground(new Color(100,100,100));
         table.setForeground(Color.white);
-      //  table.setShowGrid(false);
+        table.setShowGrid(false);
 
         JScrollPane scrollPanel =new JScrollPane(table);
 

@@ -48,6 +48,7 @@ public class Przegladarka {
         window = new JLabel(new ImageIcon(resizemyPicture));
         window.setBounds(50,50,700,400);
         window.setVisible(true);
+        window.setBackground(new Color(100, 70, 240));
 
         podpis = new JLabel(files[next].getName());
         podpis.setBounds(395,452,150, 30);
