@@ -96,13 +96,13 @@ public class Sample13_Table{
       //  table.setRowHeight(100);
         table.setBackground(new Color(100,100,100));
         table.setForeground(Color.white);
-        table.setShowGrid(false);
+        table.setShowGrid(true);
 
         JScrollPane scrollPanel =new JScrollPane(table);
 
         frame.add(scrollPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500,600);
+        frame.setSize(300,400);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
