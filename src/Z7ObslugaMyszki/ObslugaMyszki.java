@@ -77,12 +77,18 @@ public class ObslugaMyszki extends JFrame {
  //   MouseInputListener mouseInputListener = new MouseInputListener() {}
 
     MouseWheelListener mouseWheelListener = new MouseWheelListener() {
-
-        @Override
         public void mouseWheelMoved(MouseWheelEvent e) {
-                System.out.println( e.getWheelRotation() + " " + "obrót " + e.getWheelRotation());
+
+            if(e.getWheelRotation() == -1) System.out.println("Up / Forward Rotation");
+                else System.out.println("Down / Back Rotation");
+
+
+            System.out.println("param: " + e.paramString());
+
         }
-        public void mouseWheelEnded(MouseEvent e) {}
+
+
+
     };
     public JPanel createContentPane () {
         JPanel myPanel = new JPanel();
