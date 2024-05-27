@@ -4,7 +4,6 @@ package Z7ObslugaMyszki;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.event.MouseInputListener;
 import java.awt.event.*;
 
 
@@ -23,9 +22,7 @@ public class ObslugaMyszki extends JFrame {
 
             switch(e.getButton()){
                 case MouseEvent.BUTTON1 -> System.out.println("Wciśnięto LEWY KLAWISZ");
-                case MouseEvent.BUTTON2 -> {
-                    System.out.println("Wciśnięto SCROLL");
-                }
+                case MouseEvent.BUTTON2 -> System.out.println("Wciśnięto SCROLL");
                 case MouseEvent.BUTTON3 -> System.out.println("Wciśnięto PRAWY KLAWISZ");
             }
             klik += e.getClickCount();
@@ -98,7 +95,7 @@ public class ObslugaMyszki extends JFrame {
 
     public ObslugaMyszki () {
         JFrame myWindow = new JFrame("Obsługa Myszy");
-        myWindow.setContentPane(createContentPane());
+     //   myWindow.setContentPane(createContentPane());
         myWindow.setSize(600, 300);
         myWindow.setLayout(null);
         myWindow.setResizable(false);
