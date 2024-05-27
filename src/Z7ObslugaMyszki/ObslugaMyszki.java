@@ -4,10 +4,9 @@ package Z7ObslugaMyszki;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-;
+import javax.swing.event.MouseInputListener;
+import java.awt.event.*;
+
 
 public class ObslugaMyszki extends JFrame {
 
@@ -56,6 +55,35 @@ public class ObslugaMyszki extends JFrame {
         }
     };
 
+    MouseAdapter mouseAdapter = new MouseAdapter(){
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            super.mouseClicked(e);
+        }
+    };
+
+    MouseMotionListener mouseMotionListener = new MouseMotionListener() {
+        @Override
+        public void mouseDragged(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+
+        }
+    };
+
+ //   MouseInputListener mouseInputListener = new MouseInputListener() {}
+
+    MouseWheelListener mouseWheelListener = new MouseWheelListener() {
+
+        @Override
+        public void mouseWheelMoved(MouseWheelEvent e) {
+                System.out.println( e.getWheelRotation() + " " + "obrót " + e.getWheelRotation());
+        }
+        public void mouseWheelEnded(MouseEvent e) {}
+    };
     public JPanel createContentPane () {
         JPanel myPanel = new JPanel();
 
@@ -71,6 +99,7 @@ public class ObslugaMyszki extends JFrame {
         myWindow.setLocationRelativeTo(null);
         myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         myWindow.addMouseListener(myMouseListner);
+        myWindow.addMouseWheelListener(mouseWheelListener);
         myWindow.setVisible(true);
     }
 
