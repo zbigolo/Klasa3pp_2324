@@ -87,15 +87,9 @@ public class ObslugaMyszki extends JFrame {
 
 
     };
-    public JPanel createContentPane () {
-        JPanel myPanel = new JPanel();
-
-        return myPanel;
-    }
 
     public ObslugaMyszki () {
         JFrame myWindow = new JFrame("Obsługa Myszy");
-     //   myWindow.setContentPane(createContentPane());
         myWindow.setSize(600, 300);
         myWindow.setLayout(null);
         myWindow.setResizable(false);
